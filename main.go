@@ -33,7 +33,7 @@ if err != nil {
 
 for res.Next() {
     var user User
-    err = res.Scan(&user.Name, &user.Age)
+     err = res.Scan(&user.Name, &user.Age) //также добавляет данные к объекту при успешном вытягивании
     if err != nil {
       panic(err)
     }
